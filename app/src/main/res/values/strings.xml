@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">여기저기</string>
+
+    <string name="title_activity_intro">introActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="left"><![CDATA["<"]]></string>
+    <string name="right"><![CDATA[">"]]></string>
+
+
+    <string name="edt_auto_search_hint">2글자 이상 입력해주세요.</string>
+    <string name="complete">완료</string>
+    <string name="tv_tmap_location_select_desciption">지도를 이동하여 위치를 지정해주세요.</string>
+    <string name="title_location_permission">위치정보 퍼미션이 필요합니다.</string>
+    <string name="text_location_permission">이 앱은 위치정보 퍼미션이 필요합니다, 위치 기능 사용을 수락해주세요.</string>
+    <string name="ok">확인</string>
+    <string name="no_location_detected">위치를 탐지할 수 없습니다. 디바이스에서 위치가 활성화 되어있는지 확인해주세요.</string>
+    <string name="text_default_setting_location_permission">>이 앱은 위치정보 퍼미션이 필요합니다, 환경 설정에서 위치 기능 사용을 수락해주세요.</string>
+    <string name="reject_location_permission">사용자가 위치 권한 부여 안함.</string>
+
+    <string name="reselect">다시선택</string>
+    <string name="see_detail">자세히 보기</string>
+
+    <string name="test_title">제목 테스트</string>
+    <string name="test_content">내용 테스트 블라블라블라</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="search">검색</string>
+    <string name="food">음식점</string>
+    <string name="tour">관광지</string>
+    <string name="other">편의시설</string>
+    <string name="here">~에서</string>
+    <string name="there">~까지</string>
+
+    <string name="total">총</string>
+    <string name="numbers">건</string>
+    <string name="title">제목</string>
+    <string name="distance">거리순</string>
+    <string name="select">선택</string>
+    <string name="cancel">취소</string>
+
+    <string name="checkmap">지도에서 확인하기</string>
+    <string name="allselect">전체선택</string>
+    <string name="random">랜덤</string>
+
+</resources>

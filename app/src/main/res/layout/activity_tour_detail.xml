@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cl_activity_tour_detail_root_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_tour_images"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/ib_images_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@mipmap/ic_navigate_next_white_48dp"
+            app:layout_constraintRight_toRightOf="@+id/vp_tour_images"
+            app:layout_constraintBottom_toBottomOf="@+id/vp_tour_images"
+            />
+
+        <ImageButton
+            android:id="@+id/ib_images_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@mipmap/ic_navigate_before_white_48dp"
+            app:layout_constraintLeft_toLeftOf="@+id/vp_tour_images"
+            app:layout_constraintBottom_toBottomOf="@+id/vp_tour_images"
+            />
+        
+        <View
+            android:id="@+id/view_for_btn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="#2C3E50"
+            app:layout_constraintTop_toBottomOf="@+id/vp_tour_images"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_find_way_to_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/information_route"
+            app:layout_constraintTop_toTopOf="@+id/view_for_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/view_for_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_view_map"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_view_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/information_map"
+            app:layout_constraintTop_toTopOf="@+id/view_for_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/view_for_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn_find_way_to_go"
+            />
+
+        <TextView
+            android:id="@+id/tv_activity_tour_detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_for_btn"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+

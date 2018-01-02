@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.herethere.www.activity.MainActivity"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/imageView_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@mipmap/main_bg"
+        />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline1"
+        app:layout_constraintGuide_begin="150dp"
+        android:orientation="horizontal"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <ImageButton
+        android:id="@+id/btn_tour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_food"
+        android:scaleType="matrix"
+        android:background="@mipmap/main_tour_off"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"/>
+
+    <ImageButton
+        android:id="@+id/btn_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/btn_tour"
+        app:layout_constraintRight_toLeftOf="@+id/btn_other"
+        android:scaleType="matrix"
+        android:background="@mipmap/main_food_off"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"/>
+
+    <ImageButton
+        android:id="@+id/btn_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/btn_food"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="matrix"
+        android:background="@mipmap/main_other_off"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"/>
+
+    <TextView
+        android:id="@+id/edt_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/edt_end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:background="@mipmap/icon_here_searchbar_thin"
+        android:drawableLeft="@mipmap/icon_here"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:hint="@string/here"
+        android:textColorHint="#999999"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/edt_end"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/edt_start"
+        app:layout_constraintBottom_toTopOf="@+id/btn_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:background="@mipmap/icon_there_searchbar_thin"
+        android:drawableLeft="@mipmap/icon_there"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:hint="@string/there"
+        android:textColorHint="#999999"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/edt_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#2C3E50"
+        android:text="@string/search"/>
+
+</android.support.constraint.ConstraintLayout>

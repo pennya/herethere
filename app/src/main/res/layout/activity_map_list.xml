@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 총 120 건 -->
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        android:text="총"/>
+
+    <TextView
+        android:id="@+id/tv_map_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintLeft_toRightOf="@+id/tv_total"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintLeft_toRightOf="@+id/tv_map_data"
+        android:layout_margin="10dp"
+        android:text="건"/>
+
+
+    <!-- < 거리순 > -->
+
+    <TextView
+        android:id="@+id/tv_map_rightsort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:text="@string/right"/>
+
+    <TextView
+        android:id="@+id/tv_map_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintRight_toLeftOf="@+id/tv_map_rightsort"
+        android:layout_margin="10dp"
+        android:text="추천순"/>
+
+    <TextView
+        android:id="@+id/tv_map_leftsort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintRight_toLeftOf="@+id/tv_map_sort"
+        android:layout_margin="10dp"
+        android:text="@string/left"/>
+
+
+    <!-- 전체선택 ㅁ -->
+
+    <CheckBox
+        android:id="@+id/cb_map_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_map_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintRight_toLeftOf="@+id/cb_map_all"
+        android:layout_margin="10dp"
+        android:text="전체선택"/>
+
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/activity_map_list_guideline_horizontal1"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="horizontal"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_activity_map_list_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_map_list_guideline_horizontal1"
+        app:layout_constraintBottom_toTopOf="@+id/activity_map_list_guideline_horizontal2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/border_list"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/activity_map_list_guideline_horizontal2"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.85"
+        android:orientation="horizontal"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D7DADB"
+        app:layout_constraintTop_toTopOf="@+id/activity_map_list_guideline_horizontal2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_map_check"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_map_list_guideline_horizontal2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_map_select"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:background="#2C3E50"
+        android:text="지도에서 확인하기"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btn_map_select"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_map_list_guideline_horizontal2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_border"
+        android:text="선택"
+        android:textColor="#ffffff"/>
+
+
+</android.support.constraint.ConstraintLayout>
